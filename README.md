@@ -1,5 +1,7 @@
 # plumsail-weather-app
 
+Deploy version - [https://rad-sunburst-09f572.netlify.app](https://rad-sunburst-09f572.netlify.app)
+
 ## Project setup
 ```
 npm install

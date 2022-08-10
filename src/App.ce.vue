@@ -111,6 +111,11 @@ const isLoading = computed<boolean>(() => {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   font-family: 'Heebo', sans-serif;
   color: #000;
