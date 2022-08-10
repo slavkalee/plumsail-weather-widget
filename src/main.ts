@@ -1,4 +1,17 @@
-import { createApp } from "vue";
-import App from "./App.vue";
+import App from './App.ce.vue';
+import store from '@/store/index';
+import { setItem } from '@/helpers/persistanceStorage';
+import { defineCustomElement } from '@/helpers/utils';
 
-createApp(App).mount("#app");
+store.subscribe((mutation, state) => {
+  const cities = state.data.map((city) => city.name);
+
+  setItem<string[]>('cities', cities);
+});
+
+customElements.define(
+  'weather-widget',
+  defineCustomElement(App, {
+    plugins: [store],
+  })
+);
